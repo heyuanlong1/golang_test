@@ -1,0 +1,33 @@
+引入包{
+	Go-MySQL-Driver：go get github.com/go-sql-driver/mysql
+	redis.go：go get github.com/hoisie/redis
+	hunterhug/go-image：go get -v -u github.com/hunterhug/go-image #对graphics的二次封装，同时引入了graphics(https://code.google.com/archive/p/graphics-go/),其中SaveImage函数有个未close文件的bug。
+}
+
+src{
+	common{
+		conn.go 				sql方法
+		matchvs.go.lib.go 		公共方法
+	}
+
+	conf{
+		system_conf.go 			系统配置
+		error_conf.go 			错误配置
+	}
+
+	main{
+		main.go 				main包
+	}
+
+	open{
+		gc1
+	}
+
+	user{
+		gc1
+	}
+}
+go.sh 						编译脚本
+bin							
+pkg
+releasebin					真正的运行文件在这里

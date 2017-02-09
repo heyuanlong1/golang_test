@@ -1,0 +1,3 @@
+http.HandleFunc("/open/gc1/uploadAvatar", open_gc1.UploadAvatar) //上传头像
+http.HandleFunc("/open/gc1/getAvatarInfo", open_gc1.GetAvatarInfo) //获取头像信息
+http.HandleFunc("/user/gc1/Sayhello", user_gc1.Sayhello) //测试
