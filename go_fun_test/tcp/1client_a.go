@@ -22,9 +22,9 @@ func main() {
 		os.Exit(1)
 	}
 	service := os.Args[1]
-	udpAddr,err := net.ResolveUDPAddr("udp4",service)
+	tcpAddr,err := net.ResolveTCPAddr("tcp4",service)
 	checkErr(err)
-	conn,err := net.DialUDP("udp",nil ,udpAddr)
+	conn,err := net.DialTCP("tcp",nil ,tcpAddr)
 	defer conn.Close()
 	checkErr(err)
 	rAddr := conn.RemoteAddr()
