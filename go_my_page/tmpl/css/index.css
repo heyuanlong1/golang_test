@@ -1,0 +1,158 @@
+/*----------------base--------------start  */
+
+body{
+	margin: 0;
+	background-color: #f0f0f0;
+}
+/*----------------base--------------end  */
+
+
+
+/*----------------导航条--------------start  */
+.navigation_header{
+	width: 100%;
+    height: 60px;
+    margin: 0;
+    background-color: #fff;
+    border-color: #444;
+}
+
+.logo{
+	float:left;
+}
+
+.left_menu{
+	height: 0;
+}
+.left_menu a{
+	width: 100px;
+    height: 60px;
+    float:left;
+    margin-left: 5px;
+    
+    line-height: 60px;
+    text-align:center;
+    text-decoration: none;
+    
+    color: #333;
+    font-size: 16px;
+    font-family: 微软雅黑;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+}
+
+.left_menu a:hover {
+	border-bottom: 4px solid #26b1b6;
+	-webkit-transition: all .3s ease;
+}
+
+.select_menu{
+    border-bottom: 4px solid #26b1b6;
+    -webkit-transition: all .3s ease;
+}
+
+/*----------------导航条--------------end  */
+
+
+/*---------------show_big_img-------------- */
+.show_big_img{
+	width: 100%;
+    height: 200px;
+    margin-top:0px;
+    margin-bottom: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1ff;
+    border-color: #444;
+
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    /*border-bottom: 1px solid #111;*/
+}
+
+
+/*-----------container-----------------start */
+.container{
+    width: 75%;
+    height: 2000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: #aaa;
+}
+.container_left{
+    width: 75%;
+    height: 2000px;
+    float: left;
+    background-color: #bd3;
+}
+.container_right{
+    width: 24%;
+    height: 2000px;
+    float: right;
+    background-color: #c0d;
+}
+
+/*---------------search-------------- */
+.search{
+    width: 100%;
+    height: 60px;
+
+    background-color: #f2f;
+    text-align: center;
+}
+.search input{
+    margin-top: 10px;
+    border: 5px solid #EDEDEF;
+    width: 85%;
+    height: 50%;
+}
+
+/*---------------分类-------------- */
+
+.classification{
+    width: 100%;
+    height: 250px;
+
+    background-color: #26B1B6;
+    text-align: center;
+}
+
+/*---------------快捷工具-------------- */
+.fast_tool_1{
+    top:270px;
+    width:100px;
+    height:40px;
+    position: fixed;
+    background-color: #4926B6;
+}
+.fast_tool_2{
+    top:320px;
+    width:100px;
+    height:40px;
+    position: fixed;
+    background-color: #4926B6;
+}
+
+/* ------------------------------底部-------- */
+.bottom{
+    width: 100%;
+    height: 60px;
+    padding-top: 20px;
+    background-color: #494a4f;
+
+    text-align: center;
+    font-size: 24;
+    color: #fff;
+
+}
+.bottom a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
