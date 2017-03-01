@@ -1,0 +1,2 @@
+http://blog.ralch.com/tutorial/golang-working-with-zip/
+https://gist.github.com/svett/424e6784facc0ba907ae#file-extract-go
