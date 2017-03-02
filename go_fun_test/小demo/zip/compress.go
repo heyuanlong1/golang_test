@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"fmt"
 )
 
 func zipit(source, target string) error {
@@ -26,9 +27,11 @@ func zipit(source, target string) error {
 	var baseDir string
 	if info.IsDir() {
 		baseDir = filepath.Base(source)
+		fmt.Println("baseDir:" + baseDir)
 	}
 
 	filepath.Walk(source, func(path string, info os.FileInfo, err error) error {
+		fmt.Println(path)
 		if err != nil {
 			return err
 		}
@@ -39,7 +42,8 @@ func zipit(source, target string) error {
 		}
 
 		if baseDir != "" {
-			header.Name = filepath.Join(baseDir, strings.TrimPrefix(path, source))
+			header.Name = filepath.Join("", strings.TrimPrefix(path, source))
+			fmt.Println("header.Name:" + header.Name)
 		}
 
 		if info.IsDir() {
@@ -69,5 +73,5 @@ func zipit(source, target string) error {
 	return err
 }
 func main() {
-	zipit("./documents/", "./backup.zip")
+	zipit("./documents", "./backup.zip")
 }

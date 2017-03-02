@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"fmt"
 )
 
 func unzip(archive, target string) error {
@@ -18,6 +19,7 @@ func unzip(archive, target string) error {
 	}
 
 	for _, file := range reader.File {
+		fmt.Println(file.Name)
 		path := filepath.Join(target, file.Name)
 		if file.FileInfo().IsDir() {
 			os.MkdirAll(path, file.Mode())
