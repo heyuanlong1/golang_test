@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"fmt"
 )
 
 func zipit(source, target string) error {
@@ -14,25 +15,26 @@ func zipit(source, target string) error {
 		return err
 	}
 	defer zipfile.Close()
-
 	archive := zip.NewWriter(zipfile)
 	defer archive.Close()
+
 
 	info, err := os.Stat(source)
 	if err != nil {
 		return nil
 	}
-
 	var baseDir string
 	if info.IsDir() {
 		baseDir = filepath.Base(source)
+		fmt.Println("baseDir:"+baseDir)
 	}
 
 	filepath.Walk(source, func(path string, info os.FileInfo, err error) error {
+		fmt.Println("path:"+path)
+
 		if err != nil {
 			return err
 		}
-
 		header, err := zip.FileInfoHeader(info)
 		if err != nil {
 			return err
@@ -52,10 +54,10 @@ func zipit(source, target string) error {
 		if err != nil {
 			return err
 		}
-
 		if info.IsDir() {
 			return nil
 		}
+
 
 		file, err := os.Open(path)
 		if err != nil {
