@@ -131,13 +131,20 @@ body{
 
 /*---------------快捷工具-------------- */
 .fast_tool{
-    width:100px;
+    width:8%;
     height:40px;
+    line-height: 40px;
     position: fixed;
-    background-color: #4926B6;
+    background-color: #8D78CE;
+    color: #aaa;
     border-radius: 20px;
-    padding-left: 50px;
-    margin-left: -30px;
+    padding-left: 20px;
+    margin-left: -20px;
+}
+.fast_tool a{
+    color:#1E1F1C;
+    text-decoration:none;
+    font-weight:bold;
 }
 .fast_tool_1{
     top:280px;
