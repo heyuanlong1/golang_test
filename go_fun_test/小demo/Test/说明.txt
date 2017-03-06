@@ -1,0 +1,4 @@
+Golang自带了testing包可用来实现测试用例和性能测试.
+
+go test -v
+go test -v -bench=".*"
