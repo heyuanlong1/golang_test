@@ -1,0 +1,1 @@
+经典闭包导致的死锁  http://blog.csdn.net/libing_thinking/article/details/49889491
